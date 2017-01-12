@@ -30,9 +30,9 @@ describe('<Gravatar />', () => {
 
   it('should update the src state on clicking fetch', function () {
     const wrapper = mount(<Gravatar/>);
-    wrapper.setState({ email: 'hello@ifelse.io' });
+    wrapper.setState({ email: 'alexeshook@gmail.com' });
     wrapper.find('button').simulate('click');
-    expect(wrapper.state('email')).to.equal('hello@ifelse.io');
+    expect(wrapper.state('email')).to.equal('alexeshook@gmail.com');
     expect(wrapper.state('src')).to.equal(`http://gravatar.com/avatar/${md5('alexeshook@gmail.com')}?s=200`);
   });
 });
